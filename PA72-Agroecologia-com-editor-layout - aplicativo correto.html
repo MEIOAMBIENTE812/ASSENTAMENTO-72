@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1a4a2e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PA72 Agroecologia">
+<title>Produção em Base Agroecológica — Assentamento P.A. 72 · Ladário-MS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════ TOKENS ═══════════════ */
+:root{
+  --g1:#1a4a2e;--g2:#2d6a4f;--g3:#52a577;--g4:#86c99e;--g5:#d4edda;
+  --s1:#0d3d5e;--s2:#1a6b96;--s3:#5aadd6;
+  --e1:#5c2d0a;--e2:#a0522d;--e3:#d4874a;--e4:#f0b870;--e5:#fce8c8;
+  --n1:#1c1c1a;--n2:#3a3a38;--n3:#6b6b68;--n4:#9a9a97;--n5:#d4d4cf;--n6:#f2f2ee;--n7:#faf9f6;
+  --wh:#ffffff;
+  --r6:6px;--r10:10px;--r16:16px;--r24:24px;--r99:99px;
+  --sh1:0 1px 4px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.06);
+  --sh2:0 4px 16px rgba(0,0,0,.08),0 12px 40px rgba(0,0,0,.1);
+  --sh3:0 12px 48px rgba(0,0,0,.16),0 32px 80px rgba(0,0,0,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--n6);color:var(--n1);overflow-x:hidden;line-height:1.55}
+img{display:block;max-width:100%;object-fit:cover}
+button{cursor:pointer;font-family:inherit}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--g3);border-radius:99px}
+
+/* ═══════════════ NAV ═══════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--n5);
+  padding:.75rem 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.nav-brand{display:flex;align-items:center;gap:.75rem;min-width:0}
+.nav-logo{
+  width:40px;height:40px;border-radius:12px;flex-shrink:0;overflow:hidden;
+  background:linear-gradient(135deg,var(--g1),var(--g2));
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+}
+.nav-name{min-width:0}
+.nav-name strong{display:block;font-family:'Fraunces',serif;font-size:.95rem;color:var(--g1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
+.nav-name small{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--n4);letter-spacing:.1em;text-transform:uppercase}
+.nav-links{display:none;gap:1.4rem;list-style:none}
+@media(min-width:768px){.nav-links{display:flex}}
+.nav-links a{font-size:.8rem;font-weight:600;color:var(--n3);transition:color .2s;letter-spacing:.01em}
+.nav-links a:hover{color:var(--g1)}
+.nav-acts{display:flex;gap:.5rem;align-items:center;flex-shrink:0}
+.nb{padding:.48rem 1.1rem;border-radius:var(--r99);font-size:.77rem;font-weight:700;border:none;transition:all .2s;white-space:nowrap}
+.nb-ghost{background:transparent;color:var(--g2);border:1.5px solid var(--g4)}
+.nb-ghost:hover{background:var(--g5);border-color:var(--g2)}
+.nb-cta{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff}
+.nb-cta:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,74,46,.3)}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero{
+  min-height:100svh;
+  background:var(--n7);
+  padding:5rem 1.5rem 3rem;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+}
+/* fundo ilustrativo agroecológico */
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 100% 0%,rgba(82,165,119,.12) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 70% at 0% 100%,rgba(240,184,112,.12) 0%,transparent 50%),
+    linear-gradient(170deg,#f7faf5 0%,var(--n7) 60%,#f0f7f2 100%);
+}
+/* padrão de folhas SVG inline */
+.hero-leaves{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-inner{position:relative;z-index:2;max-width:1120px;margin:0 auto;width:100%;padding-top:2rem}
+.hero-layout{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+@media(min-width:820px){.hero-layout{grid-template-columns:1fr 1fr}}
+
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--g5);border:1px solid var(--g4);
+  color:var(--g1);padding:.35rem 1rem;border-radius:var(--r99);
+  font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:1.3rem;
+  animation:fadeUp .6s ease both;
+}
+.hero h1{
+  font-family:'Fraunces',serif;font-size:clamp(2.6rem,5.5vw,4.5rem);
+  color:var(--g1);line-height:1.0;font-weight:900;
+  margin-bottom:1rem;letter-spacing:-.02em;
+  animation:fadeUp .6s .1s ease both;
+}
+.hero h1 .slash{color:var(--g3);font-style:italic}
+.hero h1 .sub{
+  display:block;font-size:.38em;color:var(--n3);
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;
+  font-style:normal;margin-top:.6rem;line-height:1.5;letter-spacing:.02em;
+}
+.hero-desc{
+  color:var(--n3);font-size:.97rem;line-height:1.8;max-width:500px;
+  margin-bottom:2rem;animation:fadeUp .6s .2s ease both;
+}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+.btn-hero-main{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:linear-gradient(135deg,var(--g1),var(--g2));
+  color:#fff;padding:.88rem 1.9rem;border-radius:var(--r99);
+  font-weight:700;font-size:.88rem;border:none;
+  box-shadow:0 6px 24px rgba(26,74,46,.25);transition:all .3s;
+}
+.btn-hero-main:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(26,74,46,.35)}
+.btn-hero-sec{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--wh);color:var(--g1);
+  padding:.88rem 1.9rem;border-radius:var(--r99);
+  font-weight:600;font-size:.88rem;border:1.5px solid var(--g4);
+  box-shadow:var(--sh1);transition:all .3s;
+}
+.btn-hero-sec:hover{border-color:var(--g2);background:var(--g5)}
+.hero-nums{
+  display:flex;gap:2rem;flex-wrap:wrap;
+  margin-top:2.5rem;padding-top:2rem;
+  border-top:1px solid var(--n5);
+  animation:fadeUp .6s .4s ease both;
+}
+.hn .n{font-family:'Fraunces',serif;font-size:2.3rem;font-weight:900;color:var(--g1);line-height:1}
+.hn .l{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--n4);margin-top:.2rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* hero visual: ilustração agroecologia */
+.hero-visual{animation:fadeUp .6s .35s ease both}
+.hero-card-stack{position:relative;height:460px}
+.hc{
+  position:absolute;border-radius:var(--r24);overflow:hidden;
+  box-shadow:var(--sh3);transition:transform .5s ease;
+}
+.hc-main{width:100%;height:320px;bottom:0;left:0;background:var(--g1);display:flex;align-items:center;justify-content:center}
+.hc-float1{width:58%;height:200px;top:0;right:0;background:var(--e4);display:flex;align-items:center;justify-content:center;border-radius:var(--r16)}
+.hc-float2{width:45%;height:145px;top:20px;left:0;background:var(--g5);display:flex;align-items:center;justify-content:center;border-radius:var(--r16)}
+.hero-visual:hover .hc-float1{transform:rotate(2deg) translateY(-4px)}
+.hero-visual:hover .hc-float2{transform:rotate(-2deg) translateY(-4px)}
+.hc-content{text-align:center;padding:1.5rem;width:100%}
+.hc-icon{font-size:3.5rem;margin-bottom:.8rem;display:block}
+.hc-title{font-family:'Fraunces',serif;font-weight:700;color:var(--wh);font-size:1.1rem;margin-bottom:.35rem}
+.hc-desc{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.6}
+.hc-tag{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;padding:.22rem .6rem;border-radius:var(--r99);display:inline-block;margin:.2rem}
+.hc-tag-g{background:var(--g5);color:var(--g1)}
+.hc-tag-e{background:var(--e5);color:var(--e1)}
+
+/* ═══════════════ SECÇÕES ═══════════════ */
+.sec{padding:5rem 1.5rem}
+.inner{max-width:1120px;margin:0 auto}
+.skicker{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--e2);font-weight:700;margin-bottom:.7rem;display:block}
+.sh{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.1;margin-bottom:.9rem;letter-spacing:-.01em}
+.sp{color:var(--n3);font-size:.96rem;line-height:1.8;max-width:520px}
+
+/* cores de fundo por seção */
+.sec-light{background:var(--n7)}
+.sec-green{background:linear-gradient(160deg,#eef7f0,var(--g5))}
+.sec-dark{background:var(--g1)}
+.sec-warm{background:linear-gradient(160deg,var(--e5),#fff8ee)}
+.sec-blue{background:linear-gradient(160deg,#eaf4fb,#dbeef8)}
+
+/* ═══════════════ COMO FUNCIONA ═══════════════ */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1.2rem;margin-top:3rem}
+.step{
+  background:var(--wh);border-radius:var(--r24);padding:2rem 1.6rem;
+  border-bottom:4px solid var(--g2);box-shadow:var(--sh1);
+  transition:all .3s;position:relative;overflow:hidden;
+}
+.step::after{content:attr(data-n);position:absolute;bottom:-.5rem;right:.5rem;font-family:'Fraunces',serif;font-size:6rem;font-weight:900;color:var(--n6);line-height:1;pointer-events:none}
+.step:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
+.si{font-size:2.3rem;margin-bottom:1rem}
+.st{font-weight:700;font-size:.95rem;color:var(--g1);margin-bottom:.4rem}
+.sd{font-size:.83rem;color:var(--n3);line-height:1.65}
+
+/* ═══════════════ PRODUTOS ═══════════════ */
+.ptoolbar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.filtros{display:flex;gap:.4rem;flex-wrap:wrap}
+.fil{padding:.38rem 1.1rem;border-radius:var(--r99);border:1.5px solid var(--g4);background:transparent;color:var(--g2);font-size:.77rem;font-weight:600;transition:all .2s;letter-spacing:.02em}
+.fil:hover,.fil.on{background:var(--g2);color:#fff;border-color:var(--g2)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:1.3rem}
+
+/* card produto */
+.cp{background:var(--wh);border-radius:var(--r24);overflow:hidden;box-shadow:var(--sh1);transition:all .35s;cursor:pointer;border:2px solid transparent}
+.cp:hover{transform:translateY(-7px);box-shadow:var(--sh3);border-color:var(--g3)}
+.cp-img{height:190px;background:var(--n6);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.cp-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cp:hover .cp-img img{transform:scale(1.08)}
+.cp-em{font-size:4.2rem;position:relative;z-index:1;transition:transform .3s}
+.cp:hover .cp-em{transform:scale(1.1) rotate(-5deg)}
+.cp-badge{position:absolute;top:.75rem;left:.75rem;z-index:2;background:var(--g1);color:var(--g4);font-family:'JetBrains Mono',monospace;font-size:.58rem;font-weight:700;padding:.22rem .65rem;border-radius:var(--r99);letter-spacing:.06em;text-transform:uppercase}
+.cp-indisp{position:absolute;inset:0;z-index:3;background:rgba(250,249,246,.7);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center}
+.cp-indisp span{background:var(--n2);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;padding:.38rem .9rem;border-radius:var(--r99)}
+.cp-body{padding:1.2rem}
+.cp-name{font-weight:700;font-size:.96rem;margin-bottom:.15rem;color:var(--n1)}
+.cp-sub{font-size:.74rem;color:var(--n4);margin-bottom:.85rem}
+.cp-foot{display:flex;justify-content:space-between;align-items:center}
+.cp-price{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--g1)}
+.cp-unit{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--n4)}
+.btn-buy{background:var(--g2);color:#fff;border:none;border-radius:var(--r99);padding:.42rem .95rem;font-size:.74rem;font-weight:700;transition:all .25s;letter-spacing:.02em}
+.btn-buy:hover{background:var(--g1);transform:scale(1.04)}
+
+/* ═══════════════ PRODUTORES ═══════════════ */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:1.3rem;margin-top:2.5rem}
+.cf{background:var(--wh);border-radius:var(--r24);padding:1.8rem;box-shadow:var(--sh1);transition:all .3s;border:1.5px solid var(--g5)}
+.cf:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:var(--g3)}
+.cf-av{width:76px;height:76px;border-radius:50%;overflow:hidden;background:var(--g5);border:3px solid var(--g4);display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin-bottom:1.1rem;flex-shrink:0}
+.cf-av img{width:100%;height:100%;object-fit:cover}
+.cf-name{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--g1);margin-bottom:.18rem}
+.cf-lote{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:var(--g3);margin-bottom:.65rem;letter-spacing:.04em}
+.cf-desc{font-size:.83rem;color:var(--n3);line-height:1.7;margin-bottom:.9rem}
+.cf-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem}
+.tag{background:var(--g5);color:var(--g1);font-family:'JetBrains Mono',monospace;font-size:.65rem;padding:.2rem .6rem;border-radius:var(--r99);font-weight:700;letter-spacing:.04em}
+.btn-wpp{width:100%;background:#25D366;color:#fff;border:none;border-radius:var(--r99);padding:.65rem;font-size:.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .25s}
+.btn-wpp:hover{background:#128C7E;transform:scale(1.02)}
+
+/* ═══════════════ ENTREGA ═══════════════ */
+.egrid{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-top:2.5rem}
+@media(min-width:768px){.egrid{grid-template-columns:1.15fr .85fr}}
+.form-box{background:var(--wh);border-radius:var(--r24);padding:2.2rem;box-shadow:var(--sh2)}
+.ftitle{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--g1);margin-bottom:1.5rem}
+.fg{margin-bottom:1rem}
+.fg label{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;color:var(--n4);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:.38rem}
+.fi,.fsel{width:100%;padding:.78rem 1rem;border:1.5px solid var(--n5);border-radius:var(--r10);font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;background:var(--n7);color:var(--n1);transition:border-color .2s}
+.fi:focus,.fsel:focus{outline:none;border-color:var(--g3);background:var(--wh)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.taxa-box{background:var(--g5);border-radius:var(--r10);padding:1rem 1.2rem;margin:1rem 0;display:flex;justify-content:space-between;align-items:center}
+.taxa-lbl{font-size:.82rem;color:var(--g1)}
+.taxa-val{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;color:var(--g1)}
+.btn-form{width:100%;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border:none;border-radius:var(--r99);padding:1rem;font-weight:700;font-size:.9rem;letter-spacing:.03em;transition:all .25s}
+.btn-form:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 6px 24px rgba(26,74,46,.3)}
+.icards{display:flex;flex-direction:column;gap:1rem}
+.ic{background:var(--wh);border-radius:var(--r16);padding:1.3rem;box-shadow:var(--sh1);border-left:4px solid var(--g3);display:flex;gap:1rem;align-items:flex-start}
+.ic-icon{font-size:1.9rem;flex-shrink:0}
+.ic-t{font-weight:700;color:var(--g1);font-size:.92rem;margin-bottom:.25rem}
+.ic-d{font-size:.82rem;color:var(--n3);line-height:1.6}
+
+/* ═══════════════ AGENDA ═══════════════ */
+.evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:2.5rem}
+.cev{background:var(--wh);border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh1);display:flex;border:1.5px solid var(--n5);transition:all .3s}
+.cev:hover{transform:translateY(-3px);box-shadow:var(--sh2);border-color:var(--g4)}
+.cev-data{background:var(--g1);color:#fff;min-width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.75rem .5rem;flex-shrink:0}
+.cev-dia{font-family:'Fraunces',serif;font-size:2rem;font-weight:900;line-height:1}
+.cev-mes{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-top:.12rem}
+.cev-body{padding:1.2rem;flex:1}
+.cev-titulo{font-weight:700;font-size:.9rem;color:var(--g1);margin-bottom:.22rem}
+.cev-local{font-family:'JetBrains Mono',monospace;font-size:.63rem;color:var(--e2);font-weight:700;margin-bottom:.38rem;letter-spacing:.04em}
+.cev-desc{font-size:.8rem;color:var(--n3);line-height:1.55}
+
+/* ═══════════════ SOBRE / TESE ═══════════════ */
+.sobre-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-top:2.5rem}
+@media(min-width:768px){.sobre-grid{grid-template-columns:1fr 1fr}}
+.tese-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r24);padding:2rem}
+.tb-kicker{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--e4);margin-bottom:.9rem;display:block}
+.tb-nome{font-family:'Fraunces',serif;font-size:1.1rem;color:#fff;font-weight:700;margin-bottom:.28rem}
+.tb-sub{font-size:.87rem;color:rgba(255,255,255,.5);font-style:italic;line-height:1.7;margin-bottom:1.5rem}
+.eixos{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.eixo{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r16);padding:1.1rem;text-align:center}
+.ei{font-size:1.7rem;margin-bottom:.45rem}
+.en{font-weight:700;font-size:.78rem;color:var(--e4);margin-bottom:.2rem}
+.ed{font-size:.72rem;color:rgba(255,255,255,.38);line-height:1.5}
+.sobre-text{color:rgba(255,255,255,.6);font-size:.93rem;line-height:1.88;margin-bottom:1.3rem}
+.ods-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.ods{background:rgba(82,165,119,.18);border:1px solid rgba(82,165,119,.3);color:var(--g4);font-family:'JetBrains Mono',monospace;font-size:.63rem;padding:.28rem .72rem;border-radius:var(--r99);letter-spacing:.04em}
+.info-box{background:rgba(26,107,150,.18);border:1px solid rgba(90,173,214,.25);border-radius:var(--r16);padding:1.2rem;margin-top:1.3rem}
+.ib-l{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(90,173,214,.65);margin-bottom:.45rem}
+.ib-v{color:rgba(255,255,255,.82);font-size:.88rem;line-height:1.7}
+
+/* ═══════════════ FOOTER ═══════════════ */
+footer{background:#0d2218;padding:3rem 1.5rem;text-align:center;color:rgba(255,255,255,.38)}
+.flogo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;color:var(--g4);margin-bottom:.5rem}
+footer p{font-size:.8rem;margin-top:.7rem;line-height:1.8}
+.ftese{background:rgba(240,184,112,.06);border:1px solid rgba(240,184,112,.12);border-radius:var(--r10);display:inline-block;padding:.75rem 1.5rem;margin-top:1.3rem;font-family:'JetBrains Mono',monospace;font-size:.63rem;color:rgba(240,184,112,.5);letter-spacing:.04em}
+
+/* ═══════════════ MODAL PRODUTO ═══════════════ */
+.mov{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.7);align-items:flex-end;justify-content:center;padding:0}
+@media(min-width:600px){.mov{align-items:center;padding:1.5rem}}
+.mov.open{display:flex;animation:fadeIn .2s}
+.modal{background:var(--wh);border-radius:24px 24px 0 0;width:100%;max-width:500px;max-height:90svh;overflow-y:auto;animation:slideUp .3s cubic-bezier(.34,1.4,.64,1)}
+@media(min-width:600px){.modal{border-radius:var(--r24);animation:fadeUp .3s ease}}
+.mod-img{height:230px;background:var(--n6);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:5rem}
+.mod-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mod-em{position:relative;z-index:1}
+.mod-close{position:absolute;top:1rem;right:1rem;z-index:5;background:rgba(0,0,0,.42);color:#fff;border:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background .2s}
+.mod-close:hover{background:rgba(0,0,0,.7)}
+.mod-body{padding:1.8rem}
+.mod-name{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;color:var(--g1)}
+.mod-sub{font-size:.82rem;color:var(--n4);margin:.28rem 0 .85rem}
+.mod-desc{font-size:.9rem;color:var(--n3);line-height:1.75;border-bottom:1px solid var(--n5);padding-bottom:1.1rem;margin-bottom:1.1rem}
+.mod-row{display:flex;justify-content:space-between;align-items:center;background:var(--g5);padding:1rem 1.1rem;border-radius:var(--r16);margin-bottom:1.3rem}
+.qtdc{display:flex;align-items:center;gap:.9rem}
+.qb{width:36px;height:36px;background:var(--g1);color:#fff;border:none;border-radius:10px;font-size:1.3rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.qb:hover{background:var(--g2);transform:scale(1.08)}
+.qn{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;min-width:28px;text-align:center}
+.mod-tot{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;color:var(--g1)}
+.btn-wpp-mod{width:100%;background:#25D366;color:#fff;border:none;border-radius:var(--r99);padding:1.05rem;font-size:.93rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:all .25s}
+.btn-wpp-mod:hover{background:#128C7E;transform:scale(1.01)}
+
+/* ═══════════════ ADMIN ═══════════════ */
+.aov{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.85);overflow-y:auto;padding:1rem}
+.aov.open{display:block}
+.login-wrap{background:var(--wh);border-radius:var(--r24);padding:2.5rem;max-width:380px;margin:3rem auto;text-align:center;box-shadow:var(--sh3)}
+.login-wrap h3{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;color:var(--g1);margin-bottom:.4rem}
+.login-wrap p{font-size:.87rem;color:var(--n3);margin-bottom:1.8rem;line-height:1.65}
+.login-err{color:#e74c3c;font-size:.78rem;margin-top:.6rem;font-family:'JetBrains Mono',monospace;display:none}
+
+.pad{background:var(--n7);border-radius:var(--r24);max-width:1000px;margin:0 auto;overflow:hidden;box-shadow:var(--sh3)}
+.pad-head{background:var(--g1);padding:1.4rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.pad-head h2{font-family:'Fraunces',serif;color:var(--g4);font-size:1.2rem;font-weight:900}
+.pad-close{background:none;border:none;color:rgba(132,201,158,.5);font-size:1.8rem;line-height:1;transition:color .2s}
+.pad-close:hover{color:var(--g4)}
+.ptabs{background:var(--wh);display:flex;overflow-x:auto;border-bottom:2px solid var(--n5)}
+.ptab{padding:.9rem 1.3rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;color:var(--n4);border:none;background:none;border-bottom:2.5px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;letter-spacing:.06em;text-transform:uppercase}
+.ptab.on{color:var(--g1);border-bottom-color:var(--g1)}
+.pbody{padding:1.8rem}
+.psec{display:none}.psec.on{display:block}
+
+/* admin cards */
+.ac{background:var(--wh);border-radius:var(--r16);padding:1.3rem;margin-bottom:.9rem;box-shadow:var(--sh1);border-left:4px solid var(--g3)}
+.ac-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.7rem;flex-wrap:wrap;gap:.5rem}
+.ac-title{font-weight:700;font-size:.92rem;color:var(--g1);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.chip{padding:.2rem .6rem;border-radius:var(--r99);font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700}
+.chip-on{background:#d4edda;color:#155724}.chip-off{background:#f8d7da;color:#721c24}
+.abtns{display:flex;gap:.4rem;flex-wrap:wrap}
+.abt{border:none;border-radius:var(--r99);padding:.3rem .85rem;font-size:.68rem;font-weight:700;transition:all .2s;font-family:'JetBrains Mono',monospace;letter-spacing:.04em}
+.abt-e{background:var(--s1);color:#fff}.abt-e:hover{background:var(--s2)}
+.abt-d{background:#e74c3c;color:#fff}.abt-d:hover{background:#c0392b}
+.abt-t{background:var(--n5);color:var(--n2)}.abt-t:hover{background:var(--n5)}
+.ag2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(max-width:500px){.ag2{grid-template-columns:1fr}}
+.af{display:flex;flex-direction:column;gap:.3rem}
+.af label{font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:700;color:var(--n4);text-transform:uppercase;letter-spacing:.08em}
+.af input,.af select,.af textarea{padding:.65rem .85rem;border:1.5px solid var(--n5);border-radius:var(--r6);font-family:'Plus Jakarta Sans',sans-serif;font-size:.87rem;background:var(--n7);color:var(--n1);transition:border-color .2s;width:100%}
+.af input:focus,.af select:focus,.af textarea:focus{outline:none;border-color:var(--g3);background:var(--wh)}
+.af textarea{resize:vertical;min-height:70px}
+
+/* foto upload */
+.fzone{border:2px dashed var(--n5);border-radius:var(--r10);padding:1.2rem;text-align:center;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;background:var(--n7)}
+.fzone:hover{border-color:var(--g3);background:var(--g5)}
+.fzone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.fzone-ic{font-size:1.7rem;margin-bottom:.35rem}
+.fzone-txt{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--n4)}
+.fprev{width:100%;height:105px;object-fit:cover;border-radius:var(--r6);display:none;position:relative;z-index:1}
+
+.btn-add-adm{background:linear-gradient(135deg,var(--g2),var(--g3));color:#fff;border:none;border-radius:var(--r99);padding:.78rem 1.5rem;font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1.3rem;transition:all .25s}
+.btn-add-adm:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 4px 14px rgba(45,106,79,.3)}
+.btn-save{background:var(--g1);color:var(--g4);border:none;border-radius:var(--r99);padding:.68rem 1.5rem;font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .25s}
+.btn-save:hover{background:var(--g2);filter:brightness(1.1)}
+.btn-cancel{background:var(--n5);color:var(--n2);border:none;border-radius:var(--r99);padding:.65rem 1.2rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;cursor:pointer;letter-spacing:.04em}
+.fnovo{background:var(--g5);border:2px dashed var(--g3);border-radius:var(--r16);padding:1.5rem;margin-bottom:1.3rem;display:none}
+.fnovo.open{display:block}
+.fnovo-t{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.82rem;color:var(--g1);margin-bottom:1.1rem;letter-spacing:.05em;text-transform:uppercase}
+
+/* toast */
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--g1);color:var(--g4);padding:.9rem 1.8rem;border-radius:var(--r99);font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;z-index:999;opacity:0;transition:all .35s;white-space:nowrap;box-shadow:var(--sh3);letter-spacing:.04em}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-logo">🌿</div>
+    <div class="nav-name">
+      <strong>P.A. 72 Agroecologia · Ladário-MS</strong>
+      <small>Pantanal · Fronteira Brasil–Bolívia</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#como">Como Funciona</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#produtores">Produtores</a></li>
+    <li><a href="#entrega">Entrega</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#sobre">Tese</a></li>
+  </ul>
+  <div class="nav-acts">
+    <button class="nb nb-ghost" onclick="abrirLogin()">⚙️ Admin</button>
+    <button class="nb nb-cta" onclick="ir('#entrega')">Fazer Pedido</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-leaves" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;opacity:.4">
+    <g fill="none">
+      <ellipse cx="1100" cy="80" rx="180" ry="80" fill="#d4edda" opacity=".5" transform="rotate(-30 1100 80)"/>
+      <ellipse cx="1050" cy="120" rx="120" ry="50" fill="#86c99e" opacity=".3" transform="rotate(-30 1050 120)"/>
+      <line x1="1050" y1="50" x2="1050" y2="190" stroke="#52a577" stroke-width="2" opacity=".4"/>
+      <ellipse cx="60" cy="580" rx="130" ry="55" fill="#fce8c8" opacity=".6" transform="rotate(20 60 580)"/>
+      <ellipse cx="80" cy="560" rx="80" ry="32" fill="#f0b870" opacity=".35" transform="rotate(20 80 560)"/>
+      <ellipse cx="300" cy="650" rx="90" ry="38" fill="#d4edda" opacity=".4" transform="rotate(-15 300 650)"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-layout">
+      <div>
+        <div class="hero-kicker">🌾 Assentamento P.A. 72 · Ladário-MS · 85 famílias</div>
+        <h1>
+          Produção em Base<br>
+          <span class="slash">Agroecológica</span>
+          <span class="sub">Assentamento P.A. 72 de Ladário–MS<br>Fronteira Brasil–Bolívia · Pantanal</span>
+        </h1>
+        <p class="hero-desc">Alimentos cultivados com cuidado pelas famílias assentadas no PA72. Direto do produtor, sem intermediários, com toda a identidade do Pantanal e da fronteira Brasil–Bolívia.</p>
+        <div class="hero-btns">
+          <a href="#produtos" class="btn-hero-main">🛒 Ver Produtos</a>
+          <a href="#entrega" class="btn-hero-sec">📋 Quero Receber em Casa</a>
+        </div>
+        <div class="hero-nums">
+          <div class="hn"><div class="n">85</div><div class="l">Famílias</div></div>
+          <div class="hn"><div class="n">PA72</div><div class="l">Assentamento</div></div>
+          <div class="hn"><div class="n">100%</div><div class="l">Agroecológico</div></div>
+          <div class="hn"><div class="n">Direto</div><div class="l">Sem intermediário</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hc hc-float2">
+            <div class="hc-content" style="padding:1.2rem">
+              <span style="font-size:2.5rem">🌱</span>
+              <div style="font-size:.8rem;font-weight:700;color:var(--g1);margin:.4rem 0 .2rem">Circuito Curto</div>
+              <span class="hc-tag hc-tag-g">Produtor → Mesa</span>
+            </div>
+          </div>
+          <div class="hc hc-float1">
+            <div class="hc-content" style="padding:1.2rem">
+              <span style="font-size:2.5rem">🗺️</span>
+              <div style="font-size:.85rem;font-weight:700;color:var(--e1);margin:.4rem 0 .3rem">Fronteira Viva</div>
+              <span class="hc-tag hc-tag-e">BR · BO · Pantanal</span>
+            </div>
+          </div>
+          <div class="hc hc-main">
+            <div class="hc-content">
+              <span class="hc-icon">🌿</span>
+              <div class="hc-title">Produção em Base<br>Agroecológica</div>
+              <div class="hc-desc">P.A. 72 · Ladário-MS<br>Pesquisa-Ação UFMS 2025–2028</div>
+              <div style="margin-top:1rem;display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem">
+                <span class="hc-tag" style="background:rgba(132,201,158,.2);color:#86c99e">Agroecologia</span>
+                <span class="hc-tag" style="background:rgba(240,184,112,.18);color:var(--e4)">Juventude Rural</span>
+                <span class="hc-tag" style="background:rgba(90,173,214,.18);color:#5aadd6">Território</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como" class="sec sec-green">
+  <div class="inner">
+    <span class="skicker">Passo a Passo</span>
+    <h2 class="sh">Como funciona?</h2>
+    <p class="sp">Simples, sem precisar baixar nada. Funciona no celular de qualquer pessoa.</p>
+    <div class="steps">
+      <div class="step" data-n="1"><div class="si">📱</div><div class="st">Acesse pelo celular</div><div class="sd">Qualquer aparelho com internet, sem instalar. Funciona como app.</div></div>
+      <div class="step" data-n="2"><div class="si">🛒</div><div class="st">Veja os produtos</div><div class="sd">Fotos reais, preços e o nome de quem plantou cada produto.</div></div>
+      <div class="step" data-n="3"><div class="si">📋</div><div class="st">Faça seu cadastro</div><div class="sd">Seu endereço em Ladário ou Corumbá para receber em casa.</div></div>
+      <div class="step" data-n="4"><div class="si">🚗</div><div class="st">Receba em casa</div><div class="sd">Fresco, direto do produtor, com taxa de entrega acessível.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="sec sec-light">
+  <div class="inner">
+    <div class="ptoolbar">
+      <div>
+        <span class="skicker">Disponíveis agora</span>
+        <h2 class="sh" style="margin-bottom:0">Produtos do P.A. 72</h2>
+      </div>
+      <div class="filtros">
+        <button class="fil on" onclick="filtrar('todos',this)">Todos</button>
+        <button class="fil" onclick="filtrar('hortalica',this)">Hortaliças</button>
+        <button class="fil" onclick="filtrar('fruta',this)">Frutas</button>
+        <button class="fil" onclick="filtrar('processado',this)">Processados</button>
+        <button class="fil" onclick="filtrar('pescado',this)">Pescado</button>
+      </div>
+    </div>
+    <div class="pgrid" id="grid-prod"></div>
+  </div>
+</section>
+
+<!-- PRODUTORES -->
+<section id="produtores" class="sec sec-dark">
+  <div class="inner">
+    <span class="skicker" style="color:var(--e4)">Quem planta</span>
+    <h2 class="sh" style="color:#fff">Famílias do<br>Assentamento P.A. 72</h2>
+    <p class="sp" style="color:rgba(255,255,255,.55)">Conheça quem produz. Saber a origem dos alimentos é a essência do circuito curto.</p>
+    <div class="fgrid" id="grid-fam"></div>
+  </div>
+</section>
+
+<!-- ENTREGA -->
+<section id="entrega" class="sec sec-blue">
+  <div class="inner">
+    <span class="skicker">Receba em Casa</span>
+    <h2 class="sh">Cadastre-se para entrega</h2>
+    <p class="sp">Entregamos em Ladário e Corumbá com taxa acessível.</p>
+    <div class="egrid">
+      <div class="form-box">
+        <div class="ftitle">📋 Cadastro do Consumidor</div>
+        <div class="frow">
+          <div class="fg"><label>Nome completo</label><input class="fi" type="text" id="f-nome" placeholder="Seu nome"></div>
+          <div class="fg"><label>WhatsApp</label><input class="fi" type="text" id="f-wpp" placeholder="(67) 9 0000-0000"></div>
+        </div>
+        <div class="fg"><label>Endereço</label><input class="fi" type="text" id="f-end" placeholder="Rua, número"></div>
+        <div class="frow">
+          <div class="fg"><label>Bairro</label><input class="fi" type="text" id="f-bairro" placeholder="Bairro"></div>
+          <div class="fg"><label>Cidade</label>
+            <select class="fsel" id="f-cidade" onchange="calcTaxa()">
+              <option value="ladario">Ladário-MS</option>
+              <option value="corumba">Corumbá-MS</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Dia de preferência</label>
+          <select class="fsel" id="f-dia">
+            <option>Sábado (Feira Agroecológica)</option>
+            <option>Quarta-feira</option>
+            <option>Qualquer dia disponível</option>
+          </select>
+        </div>
+        <div class="taxa-box">
+          <div><div class="taxa-lbl">Taxa de entrega estimada</div><div style="font-size:.72rem;color:var(--n4)">Varia por distância</div></div>
+          <div class="taxa-val" id="taxa-val">R$ 5,00</div>
+        </div>
+        <button class="btn-form" onclick="enviarCad()">ENVIAR PEDIDO VIA WHATSAPP 📲</button>
+      </div>
+      <div class="icards">
+        <div class="ic"><div class="ic-icon">🥬</div><div><div class="ic-t">Sempre fresco</div><div class="ic-d">Colhido no dia ou véspera da entrega. Sem câmara fria.</div></div></div>
+        <div class="ic"><div class="ic-icon">🚗</div><div><div class="ic-t">Ladário R$5 · Corumbá R$8</div><div class="ic-d">Pedido mínimo R$20. Confirmação pelo WhatsApp.</div></div></div>
+        <div class="ic"><div class="ic-icon">💰</div><div><div class="ic-t">Pague na entrega</div><div class="ic-d">Dinheiro ou Pix. Sem cartão, sem taxa extra.</div></div></div>
+        <div class="ic"><div class="ic-icon">🤝</div><div><div class="ic-t">Direto do produtor</div><div class="ic-d">Seu dinheiro fica na família que plantou. Sem atravessador.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section id="agenda" class="sec sec-warm">
+  <div class="inner">
+    <span class="skicker">Agenda de Eventos</span>
+    <h2 class="sh">Feiras & Eventos</h2>
+    <p class="sp">Encontre os produtores nas feiras presenciais de Ladário e Corumbá.</p>
+    <div class="evgrid" id="grid-ev"></div>
+  </div>
+</section>
+
+<!-- SOBRE / TESE -->
+<section id="sobre" class="sec sec-dark">
+  <div class="inner">
+    <span class="skicker" style="color:var(--e4)">Contexto & Origem</span>
+    <h2 class="sh" style="color:#fff">Nascido de uma<br>pesquisa de campo</h2>
+    <div class="sobre-grid">
+      <div>
+        <div class="tese-box">
+          <span class="tb-kicker">📚 Tese de Doutorado · UFMS · PPGEF</span>
+          <div class="tb-nome">Elvis Augusto Souza da Rocha</div>
+          <div class="tb-sub">"Estratégias para o Desenvolvimento Territorial Rural Sustentável no Município Fronteiriço de Ladário-MS, Brasil" — Orientador: Dr. Edgar Aparecido da Costa. 2025–2028.</div>
+          <div class="eixos">
+            <div class="eixo"><div class="ei">🌿</div><div class="en">Agroecologia</div><div class="ed">Sem agrotóxicos</div></div>
+            <div class="eixo"><div class="ei">🗺️</div><div class="en">Território</div><div class="ed">Fronteira BR–BO</div></div>
+            <div class="eixo"><div class="ei">🤝</div><div class="en">Circuitos Curtos</div><div class="ed">Venda direta</div></div>
+            <div class="eixo"><div class="ei">👩‍🌾</div><div class="en">Juventude Rural</div><div class="ed">Permanência</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="sobre-text">Este aplicativo é um produto concreto da pesquisa-ação junto às 85 famílias do PA72 — o único assentamento rural de Ladário-MS. Ele materializa o conceito de <strong style="color:var(--e4)">circuito curto de comercialização</strong>: produtor e consumidor sem intermediários.</p>
+        <p class="sobre-text">A condição de fronteira Brasil–Bolívia não é fragilidade — é um recurso estratégico para o desenvolvimento territorial rural sustentável, conforme a hipótese central da tese.</p>
+        <div class="info-box">
+          <div class="ib-l">Linha de Pesquisa</div>
+          <div class="ib-v">Estratégias políticas, mobilidade humana e desenvolvimento territorial · PPGEF/UFMS Campus do Pantanal · Corumbá-MS</div>
+        </div>
+        <div class="ods-row">
+          <span class="ods">ODS 2 — Fome Zero</span>
+          <span class="ods">ODS 12 — Consumo Responsável</span>
+          <span class="ods">ODS 15 — Vida Terrestre</span>
+          <span class="ods">PDIF Centro-Oeste</span>
+          <span class="ods">PAA Municipal</span>
+          <span class="ods">PNAE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">🌿 P.A. 72 Agroecologia · Ladário-MS</div>
+  <p>Produção em Base Agroecológica do Assentamento P.A. 72 de Ladário-MS</p>
+  <p>Entregas em Ladário e Corumbá · Segunda a Sábado · Pantanal · Fronteira Brasil–Bolívia</p>
+  <div class="ftese">Produto de Tese de Doutorado · PPGEF / UFMS Campus do Pantanal · Elvis Augusto Souza da Rocha · 2025–2028</div>
+</footer>
+
+<!-- MODAL PRODUTO -->
+<div class="mov" id="mov" onclick="if(event.target===this)fechMod()">
+  <div class="modal">
+    <div class="mod-img" id="mod-hero">
+      <button class="mod-close" onclick="fechMod()">✕</button>
+      <span class="mod-em" id="mod-em">🥬</span>
+    </div>
+    <div class="mod-body">
+      <div class="mod-name" id="mod-nm"></div>
+      <div class="mod-sub" id="mod-sb"></div>
+      <p class="mod-desc" id="mod-dc"></p>
+      <div class="mod-row">
+        <div class="qtdc">
+          <button class="qb" onclick="mudaQ(-1)">−</button>
+          <span class="qn" id="mod-q">1</span>
+          <button class="qb" onclick="mudaQ(1)">+</button>
+        </div>
+        <div class="mod-tot" id="mod-tot">R$ 0,00</div>
+      </div>
+      <button class="btn-wpp-mod" id="mod-wpp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pedir pelo WhatsApp do Produtor
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div class="aov" id="login-ov">
+  <div class="login-wrap">
+    <div style="font-size:3rem;margin-bottom:.6rem">🔐</div>
+    <h3>Área Administrativa</h3>
+    <p>Gerencie produtos, produtores, fotos e <strong>agenda de eventos</strong> do P.A. 72.</p>
+    <div class="fg"><label>Senha</label><input class="fi" type="password" id="senha-inp" placeholder="Digite a senha" onkeydown="if(event.key==='Enter')verificaSenha()"></div>
+    <div class="login-err" id="login-err">❌ Senha incorreta.</div>
+    <button class="btn-form" style="margin-top:1rem" onclick="verificaSenha()">ENTRAR</button>
+    <p style="margin-top:1rem;font-size:.72rem;color:var(--n4)">Senha padrão: <strong>pa72admin</strong></p>
+    <button onclick="fechLogin()" style="display:block;margin:.8rem auto 0;background:none;border:none;color:var(--n4);cursor:pointer;font-size:.8rem">Cancelar</button>
+  </div>
+</div>
+
+<!-- PAINEL ADMIN -->
+<div class="aov" id="pad-ov">
+  <div class="pad">
+    <div class="pad-head">
+      <h2>⚙️ Painel — Produção Agroecológica P.A. 72</h2>
+      <button class="pad-close" onclick="fechPainel()">✕</button>
+    </div>
+    <div class="ptabs">
+      <button class="ptab on" onclick="mudaTab('t-prod',this)">🌿 Produtos</button>
+      <button class="ptab" onclick="mudaTab('t-fam',this)">👨‍🌾 Produtores</button>
+      <button class="ptab" onclick="mudaTab('t-agenda',this)">📅 Agenda</button>
+      <button class="ptab" onclick="mudaTab('t-cfg',this)">⚙️ Config</button>
+      <button class="ptab" onclick="mudaTab('t-layout',this)" style="color:#f0b870;font-weight:800">🎨 Layout</button>
+    </div>
+    <div class="pbody">
+
+      <!-- TAB PRODUTOS -->
+      <div class="psec on" id="t-prod">
+        <button class="btn-add-adm" onclick="togF('fn-prod')">➕ Adicionar Produto</button>
+        <div class="fnovo" id="fn-prod">
+          <div class="fnovo-t">Novo Produto</div>
+          <div class="ag2">
+            <div class="af"><label>Nome do produto</label><input id="np-nm" placeholder="Ex: Alface Crespa"></div>
+            <div class="af"><label>Emoji (sem foto)</label><input id="np-em" placeholder="🥬" maxlength="4"></div>
+            <div class="af"><label>Produtor</label><select id="np-pr"><option value="">Selecione...</option></select></div>
+            <div class="af"><label>Categoria</label>
+              <select id="np-cat"><option value="hortalica">Hortaliça</option><option value="fruta">Fruta</option><option value="processado">Processado</option><option value="pescado">Pescado</option></select>
+            </div>
+            <div class="af"><label>Preço R$</label><input id="np-pc" type="number" step="0.50" placeholder="0.00"></div>
+            <div class="af"><label>Unidade</label><input id="np-un" placeholder="kg, maço, unidade..."></div>
+            <div class="af"><label>Selo / Badge</label><input id="np-bd" placeholder="Orgânico, Artesanal..."></div>
+            <div class="af"><label>Disponível?</label><select id="np-dp"><option value="true">Sim ✅</option><option value="false">Não ⏳</option></select></div>
+          </div>
+          <div class="af" style="margin-top:.9rem"><label>📸 Foto do produto (substitui emoji)</label>
+            <div class="fzone" id="fz-np"><input type="file" accept="image/*" onchange="prevFoto(this,'fp-np','fzc-np')"><img id="fp-np" class="fprev"><div id="fzc-np"><div class="fzone-ic">📸</div><div class="fzone-txt">Toque para escolher a foto</div></div></div>
+          </div>
+          <div class="af" style="margin-top:.8rem"><label>Descrição</label><textarea id="np-dc" placeholder="Descreva o produto e modo de cultivo..."></textarea></div>
+          <div style="display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap">
+            <button class="btn-save" onclick="addProd()">✅ Salvar</button>
+            <button class="btn-cancel" onclick="togF('fn-prod')">Cancelar</button>
+          </div>
+        </div>
+        <div id="lista-prod-adm"></div>
+      </div>
+
+      <!-- TAB PRODUTORES -->
+      <div class="psec" id="t-fam">
+        <button class="btn-add-adm" onclick="togF('fn-fam')">➕ Cadastrar Produtor</button>
+        <div class="fnovo" id="fn-fam">
+          <div class="fnovo-t">Nova Família Produtora</div>
+          <div class="ag2">
+            <div class="af"><label>Nome da família</label><input id="nf-nm" placeholder="Ex: Família Pereira"></div>
+            <div class="af"><label>Emoji (sem foto)</label><input id="nf-em" placeholder="👨‍🌾" maxlength="4"></div>
+            <div class="af"><label>Lote no PA72</label><input id="nf-lt" placeholder="Ex: Lote 08 — PA72"></div>
+            <div class="af"><label>WhatsApp (com DDI)</label><input id="nf-tel" placeholder="5567999990001"></div>
+          </div>
+          <div class="af" style="margin-top:.9rem"><label>📸 Foto da família ou do sítio</label>
+            <div class="fzone" id="fz-nf"><input type="file" accept="image/*" onchange="prevFoto(this,'fp-nf','fzc-nf')"><img id="fp-nf" class="fprev"><div id="fzc-nf"><div class="fzone-ic">📸</div><div class="fzone-txt">Toque para escolher a foto</div></div></div>
+          </div>
+          <div class="af" style="margin-top:.8rem"><label>Descrição / História</label><textarea id="nf-dc" placeholder="Conte a história da família no assentamento..."></textarea></div>
+          <div class="af" style="margin-top:.8rem"><label>Tags (separadas por vírgula)</label><input id="nf-tg" placeholder="Hortaliças, Orgânico..."></div>
+          <div style="display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap">
+            <button class="btn-save" onclick="addFam()">✅ Salvar</button>
+            <button class="btn-cancel" onclick="togF('fn-fam')">Cancelar</button>
+          </div>
+        </div>
+        <div id="lista-fam-adm"></div>
+      </div>
+
+      <!-- TAB AGENDA ← NOVA! -->
+      <div class="psec" id="t-agenda">
+        <button class="btn-add-adm" onclick="togF('fn-ev')">➕ Adicionar Evento</button>
+        <div class="fnovo" id="fn-ev">
+          <div class="fnovo-t">Novo Evento / Feira</div>
+          <div class="ag2">
+            <div class="af"><label>Dia (número ou texto)</label><input id="ne-dia" placeholder="Ex: 22  ou  Sáb"></div>
+            <div class="af"><label>Mês / Frequência</label><input id="ne-mes" placeholder="Ex: Abr  ou  Semanal"></div>
+            <div class="af"><label>Título do evento</label><input id="ne-titulo" placeholder="Ex: Feira Agroecológica de Ladário"></div>
+            <div class="af"><label>Local</label><input id="ne-local" placeholder="Ex: Praça Central · 6h às 12h"></div>
+          </div>
+          <div class="af" style="margin-top:.8rem"><label>Descrição</label><textarea id="ne-dc" placeholder="Detalhes do evento..."></textarea></div>
+          <div style="display:flex;gap:.7rem;margin-top:1rem;flex-wrap:wrap">
+            <button class="btn-save" onclick="addEv()">✅ Salvar Evento</button>
+            <button class="btn-cancel" onclick="togF('fn-ev')">Cancelar</button>
+          </div>
+        </div>
+        <div id="lista-ev-adm"></div>
+      </div>
+
+      <!-- TAB CONFIG -->
+      <div class="psec" id="t-cfg">
+        <div class="ac">
+          <div class="ac-head"><div class="ac-title">🔐 Alterar Senha</div></div>
+          <div class="ag2">
+            <div class="af"><label>Nova senha</label><input type="password" id="ns1" placeholder="Mín. 6 caracteres"></div>
+            <div class="af"><label>Confirmar</label><input type="password" id="ns2" placeholder="Repita"></div>
+          </div>
+          <button class="btn-save" style="margin-top:1rem" onclick="alteraSenha()">Salvar Senha</button>
+        </div>
+        <div class="ac" style="margin-top:1rem">
+          <div class="ac-head"><div class="ac-title">📱 WhatsApp da Associação</div></div>
+          <div class="af"><label>Número (com DDI 55, sem espaços)</label><input id="wpp-assoc" placeholder="5567999990000"></div>
+          <button class="btn-save" style="margin-top:1rem" onclick="salvaConf()">Salvar</button>
+        </div>
+        <div class="ac" style="margin-top:1rem">
+          <div class="ac-head"><div class="ac-title" style="color:#e74c3c">🗑️ Resetar todos os dados</div></div>
+          <p style="font-size:.82rem;color:var(--n3);margin-bottom:1rem">Apaga tudo e volta para os dados de exemplo.</p>
+          <button onclick="resetaDados()" style="background:#e74c3c;color:#fff;border:none;border-radius:var(--r99);padding:.68rem 1.5rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;cursor:pointer;letter-spacing:.04em">⚠️ RESETAR TUDO</button>
+        </div>
+      </div>
+
+      <!-- TAB LAYOUT -->
+      <div class="psec" id="t-layout">
+        <style>
+          .lay-section{background:var(--n6);border-radius:var(--r16);padding:1.3rem 1.4rem;margin-bottom:1.1rem}
+          .lay-sec-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;color:var(--e2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem}
+          .lay-cores{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.8rem}
+          .lay-cor{display:flex;flex-direction:column;gap:.3rem}
+          .lay-cor label{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--n4);letter-spacing:.06em}
+          .lay-cor input[type=color]{width:100%;height:42px;border-radius:10px;border:2px solid var(--n5);cursor:pointer;padding:3px;background:#fff}
+          .lay-txt{display:flex;flex-direction:column;gap:.7rem}
+          .lay-field label{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--n4);letter-spacing:.08em;display:block;margin-bottom:.3rem}
+          .lay-field input,.lay-field textarea,.lay-field select{width:100%;padding:.7rem .9rem;border:1.5px solid var(--n5);border-radius:var(--r10);font-family:'Plus Jakarta Sans',sans-serif;font-size:.87rem;background:#fff;color:var(--n1);transition:border-color .2s;resize:vertical}
+          .lay-field input:focus,.lay-field textarea:focus,.lay-field select:focus{outline:none;border-color:var(--g3)}
+          .lay-field textarea{min-height:70px}
+          .lay-prev{background:var(--n1);border-radius:var(--r16);padding:1.2rem;margin-bottom:1.2rem;position:relative;overflow:hidden}
+          .lay-prev-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--n4);letter-spacing:.1em;margin-bottom:.8rem;text-transform:uppercase}
+          .prev-nav-sim{border-radius:10px;padding:.7rem 1rem;display:flex;align-items:center;gap:.7rem;margin-bottom:.7rem}
+          .prev-nav-logo{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+          .prev-nav-nome{font-family:'Fraunces',serif;font-size:.85rem;font-weight:900;color:#fff}
+          .prev-hero-sim{border-radius:10px;padding:1.4rem 1rem;text-align:center;margin-bottom:.7rem}
+          .prev-hero-h{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;color:#fff;line-height:1.15}
+          .prev-hero-h em{font-style:italic}
+          .prev-hero-p{font-size:.72rem;color:rgba(255,255,255,.75);margin-top:.5rem}
+          .prev-cards-sim{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem}
+          .prev-card-sim{border-radius:8px;padding:.6rem;border-left:3px solid}
+          .prev-card-sim span{font-size:.72rem;font-weight:700}
+          .prev-card-sim p{font-size:.6rem;color:#666;margin-top:2px}
+          .lay-apply-btn{width:100%;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border:none;border-radius:var(--r99);padding:.9rem;font-weight:800;font-size:.88rem;letter-spacing:.04em;transition:all .25s;cursor:pointer;margin-bottom:.6rem}
+          .lay-apply-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+          .lay-reset-btn{width:100%;background:transparent;color:var(--n4);border:1.5px solid var(--n5);border-radius:var(--r99);padding:.7rem;font-weight:700;font-size:.82rem;cursor:pointer;transition:all .2s}
+          .lay-reset-btn:hover{border-color:var(--n3);color:var(--n2)}
+          .font-opts{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+          .font-opt-btn{border:2px solid var(--n5);border-radius:var(--r10);padding:.65rem;cursor:pointer;text-align:center;font-size:.82rem;background:#fff;transition:all .2s}
+          .font-opt-btn.sel{border-color:var(--g2);background:var(--g5);color:var(--g1);font-weight:700}
+          .range-row{display:flex;align-items:center;gap:.8rem;margin-top:.4rem}
+          .range-row input[type=range]{flex:1;accent-color:var(--g2)}
+          .range-val{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;color:var(--g2);min-width:34px}
+        </style>
+
+        <!-- PRÉVIA -->
+        <div class="lay-prev">
+          <div class="lay-prev-label">👁 PRÉVIA EM TEMPO REAL</div>
+          <div class="prev-nav-sim" id="pv-nav" style="background:linear-gradient(135deg,#1a4a2e,#2d6a4f)">
+            <div class="prev-nav-logo" id="pv-logo" style="background:rgba(255,255,255,.18)">🌿</div>
+            <div>
+              <div class="prev-nav-nome" id="pv-nome">P.A. 72 Agroecologia</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:.52rem;color:rgba(255,255,255,.55);letter-spacing:.08em" id="pv-sub">Ladário-MS · Produção Agroecológica</div>
+            </div>
+          </div>
+          <div class="prev-hero-sim" id="pv-hero" style="background:linear-gradient(135deg,#1a4a2e,#2d6a4f)">
+            <div class="prev-hero-h" id="pv-h1">Do <em>Campo</em> Para Sua Mesa</div>
+            <div class="prev-hero-p" id="pv-hp">Produção agroecológica do assentamento</div>
+          </div>
+          <div class="prev-cards-sim">
+            <div class="prev-card-sim" id="pv-c1" style="background:#eef7f0;border-left-color:#2d6a4f"><span style="color:#1a4a2e">🌿 Produto</span><p>Alface Crespa</p></div>
+            <div class="prev-card-sim" id="pv-c2" style="background:#fff8ee;border-left-color:#d4874a"><span style="color:#5c2d0a">📅 Evento</span><p>Feira Sábado</p></div>
+            <div class="prev-card-sim" id="pv-c3" style="background:#eaf4fb;border-left-color:#5aadd6"><span style="color:#0d3d5e">👨‍🌾 Família</span><p>Fam. Pereira</p></div>
+          </div>
+        </div>
+
+        <!-- CORES -->
+        <div class="lay-section">
+          <div class="lay-sec-title">🎨 Cores do Tema</div>
+          <div class="lay-cores">
+            <div class="lay-cor"><label>Verde Principal</label><input type="color" id="lc-g1" value="#1a4a2e" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Verde Médio</label><input type="color" id="lc-g2" value="#2d6a4f" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Verde Claro</label><input type="color" id="lc-g3" value="#52a577" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Verde Pastel</label><input type="color" id="lc-g5" value="#d4edda" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Terroso / Acento</label><input type="color" id="lc-e3" value="#d4874a" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Ouro / Destaque</label><input type="color" id="lc-e4" value="#f0b870" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Fundo da Página</label><input type="color" id="lc-n6" value="#f2f2ee" oninput="pvCores()"></div>
+            <div class="lay-cor"><label>Fundo do Hero</label><input type="color" id="lc-n7" value="#faf9f6" oninput="pvCores()"></div>
+          </div>
+        </div>
+
+        <!-- TEXTOS GERAIS -->
+        <div class="lay-section">
+          <div class="lay-sec-title">✍️ Título e Slogan</div>
+          <div class="lay-txt">
+            <div class="lay-field"><label>Título Principal (Hero)</label><input type="text" id="lt-h1" value="Do Campo Para Sua Mesa" oninput="pvTextos()"></div>
+            <div class="lay-field"><label>Parte em Itálico / Destaque</label><input type="text" id="lt-h1it" value="Campo" oninput="pvTextos()" placeholder="Palavra em itálico dentro do título"></div>
+            <div class="lay-field"><label>Descrição do Hero</label><textarea id="lt-desc" oninput="pvTextos()">Alimentos frescos e saudáveis, sem agrotóxicos, direto das famílias do Assentamento P.A. 72 — Ladário-MS.</textarea></div>
+            <div class="lay-field"><label>Kicker / Tag Pequena (acima do título)</label><input type="text" id="lt-kicker" value="🌿 Produção Agroecológica · Assentamento P.A. 72 · Ladário-MS" oninput="pvTextos()"></div>
+          </div>
+        </div>
+
+        <!-- CABEÇALHO / NAV -->
+        <div class="lay-section">
+          <div class="lay-sec-title">🔝 Cabeçalho (Nav)</div>
+          <div class="lay-txt">
+            <div class="lay-field"><label>Nome no Cabeçalho</label><input type="text" id="lt-navnm" value="P.A. 72 Agroecologia" oninput="pvTextos()"></div>
+            <div class="lay-field"><label>Subtexto do Cabeçalho</label><input type="text" id="lt-navsub" value="Ladário-MS · Produção Agroecológica" oninput="pvTextos()"></div>
+            <div class="lay-field"><label>Ícone / Emoji do Logo</label><input type="text" id="lt-logoem" value="🌿" maxlength="4" oninput="pvTextos()"></div>
+            <div class="lay-field"><label>Texto do Botão Principal (CTA)</label><input type="text" id="lt-cta" value="Ver Produtos"></div>
+          </div>
+        </div>
+
+        <!-- SEÇÕES TEXTUAIS -->
+        <div class="lay-section">
+          <div class="lay-sec-title">📄 Títulos das Seções</div>
+          <div class="lay-txt">
+            <div class="lay-field"><label>Título Seção — Como Funciona</label><input type="text" id="lt-sf1" value="Do campo à sua mesa em 3 passos"></div>
+            <div class="lay-field"><label>Título Seção — Produtos</label><input type="text" id="lt-sf2" value="O que está disponível hoje"></div>
+            <div class="lay-field"><label>Título Seção — Produtores</label><input type="text" id="lt-sf3" value="Famílias do Assentamento P.A. 72"></div>
+            <div class="lay-field"><label>Título Seção — Agenda</label><input type="text" id="lt-sf4" value="Feiras &amp; Eventos"></div>
+            <div class="lay-field"><label>Título Seção — Sobre / Tese</label><input type="text" id="lt-sf5" value="Nascido de uma pesquisa de campo"></div>
+          </div>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="lay-section">
+          <div class="lay-sec-title">🦶 Rodapé</div>
+          <div class="lay-txt">
+            <div class="lay-field"><label>Texto do Rodapé (linha 1)</label><input type="text" id="lt-ft1" value="Produção em Base Agroecológica do Assentamento P.A. 72 de Ladário-MS"></div>
+            <div class="lay-field"><label>Texto do Rodapé (linha 2)</label><input type="text" id="lt-ft2" value="Entregas em Ladário e Corumbá · Segunda a Sábado · Pantanal · Fronteira Brasil–Bolívia"></div>
+            <div class="lay-field"><label>Nota da Tese (rodapé)</label><input type="text" id="lt-fttese" value="Produto de Tese de Doutorado · PPGEF / UFMS Campus do Pantanal · Elvis Augusto Souza da Rocha · 2025–2028"></div>
+          </div>
+        </div>
+
+        <!-- TIPOGRAFIA -->
+        <div class="lay-section">
+          <div class="lay-sec-title">🔠 Fonte dos Títulos</div>
+          <div class="font-opts">
+            <div class="font-opt-btn sel" style="font-family:'Fraunces',serif" data-font="'Fraunces',serif" onclick="selFont(this)">Fraunces</div>
+            <div class="font-opt-btn" style="font-family:Georgia,serif" data-font="Georgia,serif" onclick="selFont(this)">Georgia</div>
+            <div class="font-opt-btn" style="font-family:'Plus Jakarta Sans',sans-serif" data-font="'Plus Jakarta Sans',sans-serif" onclick="selFont(this)">Jakarta</div>
+            <div class="font-opt-btn" style="font-family:Verdana,sans-serif" data-font="Verdana,sans-serif" onclick="selFont(this)">Verdana</div>
+          </div>
+        </div>
+
+        <!-- BORDAS -->
+        <div class="lay-section">
+          <div class="lay-sec-title">📐 Arredondamento dos Cards</div>
+          <div class="lay-field"><label>Raio das Bordas dos Cards</label>
+            <div class="range-row">
+              <input type="range" min="0" max="32" value="24" id="lr-radius" oninput="document.getElementById('lrv-radius').textContent=this.value+'px';pvRadius()">
+              <span class="range-val" id="lrv-radius">24px</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- APLICAR -->
+        <button class="lay-apply-btn" onclick="aplicarLayout()">✅ APLICAR LAYOUT AO SITE</button>
+        <button class="lay-reset-btn" onclick="resetLayout()">↩️ Restaurar Padrão Visual</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✅ Salvo!</div>
+
+<script>
+/* ═══════════════ DADOS PADRÃO ═══════════════ */
+const PADRAO={
+  produtos:[
+    {id:1,nm:"Alface Crespa",pr:"Família Pereira",lt:"Lote 08 — PA72",em:"🥬",cat:"hortalica",pc:3,un:"maço",bd:"Orgânico",dc:"Alface fresca colhida pela manhã. Sem agrotóxicos, adubação orgânica.",tel:"5567999990001",dp:true,foto:""},
+    {id:2,nm:"Tomate Cereja",pr:"Família Santos",lt:"Lote 14 — PA72",em:"🍅",cat:"hortalica",pc:7,un:"250g",bd:"Sem Agrotóxico",dc:"Tomates doces cultivados em canteiros agroecológicos.",tel:"5567999990002",dp:true,foto:""},
+    {id:3,nm:"Mandioca",pr:"Família Almeida",lt:"Lote 03 — PA72",em:"🪵",cat:"hortalica",pc:4,un:"kg",bd:"Agroecológico",dc:"Mandioca amarela cultivada em sistema agroflorestal.",tel:"5567999990003",dp:true,foto:""},
+    {id:4,nm:"Banana Comprida",pr:"Família Souza",lt:"Lote 21 — PA72",em:"🍌",cat:"fruta",pc:5,un:"kg",bd:"Orgânico",dc:"Madura no pé, sistema agroflorestal.",tel:"5567999990004",dp:true,foto:""},
+    {id:5,nm:"Farinha de Mandioca",pr:"Família Almeida",lt:"Lote 03 — PA72",em:"🫙",cat:"processado",pc:9,un:"500g",bd:"Artesanal",dc:"Farinha grossa torrada no forno de barro, processo familiar.",tel:"5567999990003",dp:true,foto:""},
+    {id:6,nm:"Mel de Abelha Nativa",pr:"Família Nunes",lt:"Lote 19 — PA72",em:"🍯",cat:"processado",pc:28,un:"300ml",bd:"Artesanal",dc:"Mel de abelhas nativas, florada silvestre do Pantanal.",tel:"5567999990008",dp:true,foto:""},
+    {id:7,nm:"Couve Manteiga",pr:"Família Pereira",lt:"Lote 08 — PA72",em:"🌿",cat:"hortalica",pc:4,un:"maço",bd:"Orgânico",dc:"Couve fresca sem agrotóxicos, colhida pela manhã.",tel:"5567999990001",dp:true,foto:""},
+    {id:8,nm:"Mamão Formosa",pr:"Família Souza",lt:"Lote 21 — PA72",em:"🧡",cat:"fruta",pc:6,un:"unidade",bd:"Orgânico",dc:"Mamão doce, colhido maduro no pé.",tel:"5567999990004",dp:true,foto:""},
+  ],
+  familias:[
+    {id:1,nm:"Família Pereira",lt:"Lote 08 — PA72",em:"👨‍🌾",dc:"12 anos no PA72. Hortaliças folhosas com irrigação artesanal e compostagem.",tg:["Hortaliças","Folhosas","Composto"],tel:"5567999990001",foto:""},
+    {id:2,nm:"Família Almeida",lt:"Lote 03 — PA72",em:"👩‍🌾",dc:"Mandioca e derivados com técnicas tradicionais. Forno de barro referência na comunidade.",tg:["Mandioca","Farinha","Artesanal"],tel:"5567999990003",foto:""},
+    {id:3,nm:"Família Santos",lt:"Lote 14 — PA72",em:"🧑‍🌾",dc:"Olerícolas diversificadas. Participantes da feira agroecológica de Ladário desde 2022.",tg:["Tomate","Pimentão","Olerícolas"],tel:"5567999990002",foto:""},
+    {id:4,nm:"Família Nunes",lt:"Lote 19 — PA72",em:"👨‍🌾",dc:"Apicultura sustentável com abelhas nativas do Pantanal.",tg:["Mel","Apicultura","Pantanal"],tel:"5567999990008",foto:""},
+    {id:5,nm:"Família Souza",lt:"Lote 21 — PA72",em:"👩‍🌾",dc:"Fruticultura agroflorestal. Banana, mamão e outras frutas cultivadas de forma sustentável.",tg:["Frutas","Agrofloresta","Banana"],tel:"5567999990004",foto:""},
+  ],
+  eventos:[
+    {id:1,dia:"Sáb",mes:"Semanal",titulo:"Feira Agroecológica de Ladário",local:"Praça Central · 6h às 12h",dc:"Todos os sábados. Produtores do PA72 e agricultores familiares da região."},
+    {id:2,dia:"Qua",mes:"Quinzenal",titulo:"Feira do Produtor — Corumbá",local:"Orla Fluvial · 7h às 13h",dc:"Quinzenalmente. Produtos agroecológicos e artesanato pantaneiro."},
+    {id:3,dia:"22",mes:"Mar",titulo:"Reunião dos Agricultores — PA72",local:"Associação dos Produtores",dc:"Planejamento das safras, troca de sementes crioulas."},
+    {id:4,dia:"10",mes:"Abr",titulo:"Visita ao Assentamento",local:"Saída da Praça Central de Ladário · 7h",dc:"Visita guiada às propriedades. Inscrições pelo WhatsApp."},
+  ],
+  senha:"pa72admin",
+  wppAssoc:"5567999990000"
+};
+
+let D=JSON.parse(JSON.stringify(PADRAO));
+try{const s=localStorage.getItem('pa72v5');if(s)D=JSON.parse(s);}catch(e){}
+const sv=()=>{try{localStorage.setItem('pa72v5',JSON.stringify(D));}catch(e){}};
+
+/* ═══════════════ RENDER PÚBLICO ═══════════════ */
+let catAtiva='todos';
+
+function renderProd(){
+  const f=catAtiva==='todos'?D.produtos:D.produtos.filter(p=>p.cat===catAtiva);
+  const el=document.getElementById('grid-prod');
+  if(!f.length){el.innerHTML='<p style="color:var(--n3);padding:2rem 0;font-family:JetBrains Mono,monospace;font-size:.8rem">Nenhum produto nesta categoria no momento.</p>';return;}
+  el.innerHTML=f.map(p=>`
+    <div class="cp" onclick="abreMod(${p.id})">
+      <div class="cp-img">
+        ${p.foto?`<img src="${p.foto}" alt="${p.nm}" loading="lazy">`:''}
+        <span class="cp-em" style="opacity:${p.foto?'.12':'1'}">${p.em}</span>
+        <span class="cp-badge">${p.bd}</span>
+        ${!p.dp?'<div class="cp-indisp"><span>⏳ Indisponível</span></div>':''}
+      </div>
+      <div class="cp-body">
+        <div class="cp-name">${p.nm}</div>
+        <div class="cp-sub">🌱 ${p.pr} · ${p.lt}</div>
+        <div class="cp-foot">
+          <div><div class="cp-price">R$ ${Number(p.pc).toFixed(2).replace('.',',')}</div><div class="cp-unit">por ${p.un}</div></div>
+          ${p.dp?`<button class="btn-buy" onclick="event.stopPropagation();abreMod(${p.id})">Pedir</button>`:''}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderFam(){
+  document.getElementById('grid-fam').innerHTML=D.familias.map(f=>`
+    <div class="cf">
+      <div class="cf-av">${f.foto?`<img src="${f.foto}" alt="${f.nm}">`:`<span>${f.em}</span>`}</div>
+      <div class="cf-name">${f.nm}</div>
+      <div class="cf-lote">📍 ${f.lt}</div>
+      <div class="cf-desc">${f.dc}</div>
+      <div class="cf-tags">${(f.tg||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <button class="btn-wpp" onclick="wppFam('${f.tel}','${f.nm}')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </button>
+    </div>`).join('');
+}
+
+function renderEv(){
+  const el=document.getElementById('grid-ev');
+  if(!D.eventos||!D.eventos.length){el.innerHTML='<p style="color:var(--n3);font-family:JetBrains Mono,monospace;font-size:.8rem;padding:2rem 0">Nenhum evento cadastrado. Acesse o painel admin para adicionar.</p>';return;}
+  el.innerHTML=D.eventos.map(e=>`
+    <div class="cev">
+      <div class="cev-data"><div class="cev-dia">${e.dia}</div><div class="cev-mes">${e.mes}</div></div>
+      <div class="cev-body"><div class="cev-titulo">${e.titulo}</div><div class="cev-local">📍 ${e.local}</div><div class="cev-desc">${e.dc}</div></div>
+    </div>`).join('');
+}
+
+function filtrar(cat,btn){catAtiva=cat;document.querySelectorAll('.fil').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderProd();}
+function ir(id){document.querySelector(id).scrollIntoView({behavior:'smooth'});}
+
+/* ═══════════════ MODAL ═══════════════ */
+let pAtual=null,qAtual=1;
+function abreMod(id){
+  pAtual=D.produtos.find(p=>p.id===id);if(!pAtual||!pAtual.dp)return;
+  qAtual=1;
+  const mh=document.getElementById('mod-hero');
+  let mi=mh.querySelector('.mi');
+  if(!mi){mi=document.createElement('img');mi.className='mi';mi.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0';mh.prepend(mi);}
+  const em=document.getElementById('mod-em');
+  if(pAtual.foto){mi.src=pAtual.foto;mi.style.display='block';em.style.opacity='.12';}
+  else{mi.style.display='none';em.style.opacity='1';}
+  em.textContent=pAtual.em;
+  document.getElementById('mod-nm').textContent=pAtual.nm;
+  document.getElementById('mod-sb').innerHTML='🌱 '+pAtual.pr+' · '+pAtual.lt;
+  document.getElementById('mod-dc').textContent=pAtual.dc;
+  updTot();document.getElementById('mod-wpp').onclick=pedirWpp;
+  document.getElementById('mov').classList.add('open');document.body.style.overflow='hidden';
+}
+function updTot(){document.getElementById('mod-q').textContent=qAtual;document.getElementById('mod-tot').textContent='R$ '+(pAtual.pc*qAtual).toFixed(2).replace('.',',');}
+function mudaQ(d){qAtual=Math.max(1,qAtual+d);updTot();}
+function fechMod(){document.getElementById('mov').classList.remove('open');document.body.style.overflow='';}
+function pedirWpp(){const m=encodeURIComponent('Olá! Vi no app P.A.72 Agroecologia e quero pedir:\n\n*'+pAtual.nm+'* — '+qAtual+'x — R$ '+(pAtual.pc*qAtual).toFixed(2)+'\n\nPode confirmar disponibilidade e horário de entrega? 🌿');window.open('https://wa.me/'+pAtual.tel+'?text='+m,'_blank');fechMod();}
+function wppFam(tel,nm){const m=encodeURIComponent('Olá, '+nm+'! Vi seu perfil no P.A.72 Agroecologia e quero saber sobre os produtos disponíveis. 🌿');window.open('https://wa.me/'+tel+'?text='+m,'_blank');}
+
+/* ═══════════════ FORM ENTREGA ═══════════════ */
+function calcTaxa(){document.getElementById('taxa-val').textContent=document.getElementById('f-cidade').value==='ladario'?'R$ 5,00':'R$ 8,00';}
+function enviarCad(){
+  const nm=document.getElementById('f-nome').value||'(nome)',wp=document.getElementById('f-wpp').value||'(wpp)',en=document.getElementById('f-end').value||'(end)',br=document.getElementById('f-bairro').value||'',ci=document.getElementById('f-cidade').value==='ladario'?'Ladário-MS':'Corumbá-MS',di=document.getElementById('f-dia').value,tx=document.getElementById('taxa-val').textContent;
+  const m=encodeURIComponent('🌿 *Cadastro · P.A.72 Agroecologia · Ladário-MS*\n\n👤 '+nm+'\n📱 '+wp+'\n📍 '+en+(br?', '+br:'')+' · '+ci+'\n📅 '+di+'\n🚗 Taxa: '+tx+'\n\nQuero receber produtos agroecológicos do PA72 em casa!');
+  window.open('https://wa.me/'+(D.wppAssoc||PADRAO.wppAssoc)+'?text='+m,'_blank');
+}
+
+/* ═══════════════ AUTH ═══════════════ */
+function abrirLogin(){document.getElementById('login-ov').classList.add('open');document.getElementById('senha-inp').value='';document.getElementById('login-err').style.display='none';}
+function fechLogin(){document.getElementById('login-ov').classList.remove('open');}
+function verificaSenha(){if(document.getElementById('senha-inp').value===(D.senha||PADRAO.senha)){fechLogin();abrePainel();}else document.getElementById('login-err').style.display='block';}
+function abrePainel(){document.getElementById('pad-ov').classList.add('open');renderAdmProd();renderAdmFam();renderAdmEv();popSel();document.getElementById('wpp-assoc').value=D.wppAssoc||'';}
+function fechPainel(){document.getElementById('pad-ov').classList.remove('open');}
+function mudaTab(id,btn){document.querySelectorAll('.psec').forEach(s=>s.classList.remove('on'));document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('on'));document.getElementById(id).classList.add('on');btn.classList.add('on');}
+function togF(id){document.getElementById(id).classList.toggle('open');}
+function togE(id){const el=document.getElementById(id);el.style.display=el.style.display==='none'?'block':'none';}
+
+/* fotos */
+function prevFoto(inp,prevId,contentId){
+  const fr=new FileReader();
+  fr.onload=e=>{inp.dataset.b64=e.target.result;const img=document.getElementById(prevId);img.src=e.target.result;img.style.display='block';const c=document.getElementById(contentId);if(c)c.style.display='none';};
+  fr.readAsDataURL(inp.files[0]);
+}
+
+/* ═══ render admin produtos ═══ */
+function renderAdmProd(){
+  document.getElementById('lista-prod-adm').innerHTML=D.produtos.map(p=>`
+    <div class="ac">
+      <div class="ac-head">
+        <div class="ac-title">${p.em} ${p.nm} <span class="chip ${p.dp?'chip-on':'chip-off'}">${p.dp?'Disponível':'Indisponível'}</span></div>
+        <div class="abtns">
+          <button class="abt abt-t" onclick="togDp(${p.id})">${p.dp?'Pausar':'Ativar'}</button>
+          <button class="abt abt-e" onclick="togE('ep-${p.id}')">✏️ Editar</button>
+          <button class="abt abt-d" onclick="delProd(${p.id})">🗑️</button>
+        </div>
+      </div>
+      <div id="ep-${p.id}" style="display:none;margin-top:.9rem">
+        <div class="ag2">
+          <div class="af"><label>Nome</label><input id="ep-nm-${p.id}" value="${p.nm}"></div>
+          <div class="af"><label>Emoji</label><input id="ep-em-${p.id}" value="${p.em}" maxlength="4"></div>
+          <div class="af"><label>Preço R$</label><input id="ep-pc-${p.id}" type="number" step="0.50" value="${p.pc}"></div>
+          <div class="af"><label>Unidade</label><input id="ep-un-${p.id}" value="${p.un}"></div>
+          <div class="af"><label>Badge</label><input id="ep-bd-${p.id}" value="${p.bd}"></div>
+          <div class="af"><label>Categoria</label>
+            <select id="ep-cat-${p.id}"><option value="hortalica"${p.cat==='hortalica'?' selected':''}>Hortaliça</option><option value="fruta"${p.cat==='fruta'?' selected':''}>Fruta</option><option value="processado"${p.cat==='processado'?' selected':''}>Processado</option><option value="pescado"${p.cat==='pescado'?' selected':''}>Pescado</option></select>
+          </div>
+        </div>
+        <div class="af" style="margin-top:.8rem"><label>📸 Trocar foto</label>
+          <div class="fzone" id="fz-ep-${p.id}"><input type="file" accept="image/*" onchange="prevFoto(this,'fp-ep-${p.id}','fzc-ep-${p.id}')"><img id="fp-ep-${p.id}" class="fprev" ${p.foto?'src="'+p.foto+'" style="display:block"':''}><div id="fzc-ep-${p.id}" ${p.foto?'style="display:none"':''}><div class="fzone-ic">📸</div><div class="fzone-txt">Trocar foto</div></div></div>
+        </div>
+        <div class="af" style="margin-top:.8rem"><label>Descrição</label><textarea id="ep-dc-${p.id}">${p.dc}</textarea></div>
+        <div style="display:flex;gap:.7rem;margin-top:.9rem;flex-wrap:wrap">
+          <button class="btn-save" onclick="salvaEP(${p.id})">✅ Salvar</button>
+          <button class="btn-cancel" onclick="togE('ep-${p.id}')">Cancelar</button>
+        </div>
+      </div>
+      <div style="font-size:.72rem;color:var(--n4);margin-top:.3rem;font-family:JetBrains Mono,monospace">🌱 ${p.pr} · R$ ${Number(p.pc).toFixed(2)}/${p.un}</div>
+    </div>`).join('');
+}
+
+/* ═══ render admin famílias ═══ */
+function renderAdmFam(){
+  document.getElementById('lista-fam-adm').innerHTML=D.familias.map(f=>`
+    <div class="ac">
+      <div class="ac-head">
+        <div class="ac-title">${f.em} ${f.nm}</div>
+        <div class="abtns">
+          <button class="abt abt-e" onclick="togE('ef-${f.id}')">✏️ Editar</button>
+          <button class="abt abt-d" onclick="delFam(${f.id})">🗑️</button>
+        </div>
+      </div>
+      <div id="ef-${f.id}" style="display:none;margin-top:.9rem">
+        <div class="ag2">
+          <div class="af"><label>Nome</label><input id="ef-nm-${f.id}" value="${f.nm}"></div>
+          <div class="af"><label>Emoji</label><input id="ef-em-${f.id}" value="${f.em}" maxlength="4"></div>
+          <div class="af"><label>Lote</label><input id="ef-lt-${f.id}" value="${f.lt}"></div>
+          <div class="af"><label>WhatsApp</label><input id="ef-tel-${f.id}" value="${f.tel}"></div>
+        </div>
+        <div class="af" style="margin-top:.8rem"><label>📸 Foto da família</label>
+          <div class="fzone" id="fz-ef-${f.id}"><input type="file" accept="image/*" onchange="prevFoto(this,'fp-ef-${f.id}','fzc-ef-${f.id}')"><img id="fp-ef-${f.id}" class="fprev" ${f.foto?'src="'+f.foto+'" style="display:block"':''}><div id="fzc-ef-${f.id}" ${f.foto?'style="display:none"':''}><div class="fzone-ic">📸</div><div class="fzone-txt">Trocar foto</div></div></div>
+        </div>
+        <div class="af" style="margin-top:.8rem"><label>Descrição</label><textarea id="ef-dc-${f.id}">${f.dc}</textarea></div>
+        <div class="af" style="margin-top:.8rem"><label>Tags (vírgula)</label><input id="ef-tg-${f.id}" value="${(f.tg||[]).join(', ')}"></div>
+        <div style="display:flex;gap:.7rem;margin-top:.9rem;flex-wrap:wrap">
+          <button class="btn-save" onclick="salvaEF(${f.id})">✅ Salvar</button>
+          <button class="btn-cancel" onclick="togE('ef-${f.id}')">Cancelar</button>
+        </div>
+      </div>
+      <div style="font-size:.72rem;color:var(--n4);margin-top:.3rem;font-family:JetBrains Mono,monospace">📍 ${f.lt} · 📱 ${f.tel}</div>
+    </div>`).join('');
+}
+
+/* ═══ render admin AGENDA ═══ */
+function renderAdmEv(){
+  const el=document.getElementById('lista-ev-adm');
+  if(!D.eventos||!D.eventos.length){el.innerHTML='<p style="color:var(--n3);font-family:JetBrains Mono,monospace;font-size:.8rem;padding:1rem 0">Nenhum evento. Clique em Adicionar Evento acima.</p>';return;}
+  el.innerHTML=D.eventos.map(e=>`
+    <div class="ac">
+      <div class="ac-head">
+        <div class="ac-title">📅 ${e.titulo}</div>
+        <div class="abtns">
+          <button class="abt abt-e" onclick="togE('ee-${e.id}')">✏️ Editar</button>
+          <button class="abt abt-d" onclick="delEv(${e.id})">🗑️</button>
+        </div>
+      </div>
+      <div id="ee-${e.id}" style="display:none;margin-top:.9rem">
+        <div class="ag2">
+          <div class="af"><label>Dia (número ou texto)</label><input id="ee-dia-${e.id}" value="${e.dia}"></div>
+          <div class="af"><label>Mês / Frequência</label><input id="ee-mes-${e.id}" value="${e.mes}"></div>
+          <div class="af"><label>Título</label><input id="ee-titulo-${e.id}" value="${e.titulo}"></div>
+          <div class="af"><label>Local</label><input id="ee-local-${e.id}" value="${e.local}"></div>
+        </div>
+        <div class="af" style="margin-top:.8rem"><label>Descrição</label><textarea id="ee-dc-${e.id}">${e.dc}</textarea></div>
+        <div style="display:flex;gap:.7rem;margin-top:.9rem;flex-wrap:wrap">
+          <button class="btn-save" onclick="salvaEE(${e.id})">✅ Salvar</button>
+          <button class="btn-cancel" onclick="togE('ee-${e.id}')">Cancelar</button>
+        </div>
+      </div>
+      <div style="font-size:.72rem;color:var(--n4);margin-top:.3rem;font-family:JetBrains Mono,monospace">${e.dia} ${e.mes} · 📍 ${e.local}</div>
+    </div>`).join('');
+}
+
+function popSel(){const s=document.getElementById('np-pr');s.innerHTML='<option value="">Selecione...</option>'+D.familias.map(f=>`<option value="${f.nm}|${f.lt}|${f.tel}">${f.nm}</option>`).join('');}
+
+/* ações produtos */
+function togDp(id){const p=D.produtos.find(x=>x.id===id);if(!p)return;p.dp=!p.dp;sv();renderProd();renderAdmProd();toast(p.dp?'✅ Ativado!':'⏸️ Pausado!');}
+function salvaEP(id){
+  const p=D.produtos.find(x=>x.id===id);if(!p)return;
+  p.nm=document.getElementById('ep-nm-'+id).value||p.nm;
+  p.em=document.getElementById('ep-em-'+id).value||p.em;
+  p.pc=parseFloat(document.getElementById('ep-pc-'+id).value)||p.pc;
+  p.un=document.getElementById('ep-un-'+id).value||p.un;
+  p.bd=document.getElementById('ep-bd-'+id).value||p.bd;
+  p.cat=document.getElementById('ep-cat-'+id).value||p.cat;
+  p.dc=document.getElementById('ep-dc-'+id).value||p.dc;
+  const inp=document.querySelector('#fz-ep-'+id+' input[type=file]');
+  if(inp&&inp.dataset.b64)p.foto=inp.dataset.b64;
+  sv();renderProd();renderAdmProd();toast('✅ Produto atualizado!');
+}
+function delProd(id){if(!confirm('Excluir produto?'))return;D.produtos=D.produtos.filter(p=>p.id!==id);sv();renderProd();renderAdmProd();toast('🗑️ Excluído.');}
+function addProd(){
+  const nm=document.getElementById('np-nm').value;if(!nm){alert('Informe o nome.');return;}
+  const ps=document.getElementById('np-pr').value.split('|');
+  const inp=document.querySelector('#fz-np input[type=file]');
+  const nid=Math.max(0,...D.produtos.map(p=>p.id))+1;
+  D.produtos.push({id:nid,nm,em:document.getElementById('np-em').value||'🌿',cat:document.getElementById('np-cat').value,pc:parseFloat(document.getElementById('np-pc').value)||0,un:document.getElementById('np-un').value||'unidade',bd:document.getElementById('np-bd').value||'Orgânico',dc:document.getElementById('np-dc').value||'',dp:document.getElementById('np-dp').value==='true',pr:ps[0]||'PA72',lt:ps[1]||'PA72',tel:ps[2]||D.wppAssoc,foto:inp&&inp.dataset.b64?inp.dataset.b64:''});
+  sv();renderProd();renderAdmProd();togF('fn-prod');
+  ['np-nm','np-em','np-pc','np-un','np-bd','np-dc'].forEach(i=>{const el=document.getElementById(i);if(el)el.value='';});
+  toast('✅ Produto adicionado!');
+}
+
+/* ações famílias */
+function salvaEF(id){
+  const f=D.familias.find(x=>x.id===id);if(!f)return;
+  f.nm=document.getElementById('ef-nm-'+id).value||f.nm;
+  f.em=document.getElementById('ef-em-'+id).value||f.em;
+  f.lt=document.getElementById('ef-lt-'+id).value||f.lt;
+  f.tel=document.getElementById('ef-tel-'+id).value||f.tel;
+  f.dc=document.getElementById('ef-dc-'+id).value||f.dc;
+  const tg=document.getElementById('ef-tg-'+id).value;
+  f.tg=tg?tg.split(',').map(t=>t.trim()).filter(Boolean):f.tg;
+  const inp=document.querySelector('#fz-ef-'+id+' input[type=file]');
+  if(inp&&inp.dataset.b64)f.foto=inp.dataset.b64;
+  sv();renderFam();renderAdmFam();popSel();toast('✅ Produtor atualizado!');
+}
+function delFam(id){if(!confirm('Excluir produtor?'))return;D.familias=D.familias.filter(f=>f.id!==id);sv();renderFam();renderAdmFam();popSel();toast('🗑️ Excluído.');}
+function addFam(){
+  const nm=document.getElementById('nf-nm').value;if(!nm){alert('Informe o nome.');return;}
+  const inp=document.querySelector('#fz-nf input[type=file]');
+  const tg=document.getElementById('nf-tg').value;
+  const nid=Math.max(0,...D.familias.map(f=>f.id))+1;
+  D.familias.push({id:nid,nm,em:document.getElementById('nf-em').value||'👨‍🌾',lt:document.getElementById('nf-lt').value||'PA72',tel:document.getElementById('nf-tel').value||D.wppAssoc,dc:document.getElementById('nf-dc').value||'',tg:tg?tg.split(',').map(t=>t.trim()).filter(Boolean):[],foto:inp&&inp.dataset.b64?inp.dataset.b64:''});
+  sv();renderFam();renderAdmFam();popSel();togF('fn-fam');
+  ['nf-nm','nf-em','nf-lt','nf-tel','nf-dc','nf-tg'].forEach(i=>{const el=document.getElementById(i);if(el)el.value='';});
+  toast('✅ Produtor cadastrado!');
+}
+
+/* ações AGENDA */
+function addEv(){
+  const titulo=document.getElementById('ne-titulo').value;if(!titulo){alert('Informe o título.');return;}
+  const nid=D.eventos&&D.eventos.length?Math.max(...D.eventos.map(e=>e.id))+1:1;
+  if(!D.eventos)D.eventos=[];
+  D.eventos.push({id:nid,dia:document.getElementById('ne-dia').value||'?',mes:document.getElementById('ne-mes').value||'',titulo,local:document.getElementById('ne-local').value||'',dc:document.getElementById('ne-dc').value||''});
+  sv();renderEv();renderAdmEv();togF('fn-ev');
+  ['ne-dia','ne-mes','ne-titulo','ne-local','ne-dc'].forEach(i=>{const el=document.getElementById(i);if(el)el.value='';});
+  toast('✅ Evento adicionado!');
+}
+function salvaEE(id){
+  const e=D.eventos.find(x=>x.id===id);if(!e)return;
+  e.dia=document.getElementById('ee-dia-'+id).value||e.dia;
+  e.mes=document.getElementById('ee-mes-'+id).value||e.mes;
+  e.titulo=document.getElementById('ee-titulo-'+id).value||e.titulo;
+  e.local=document.getElementById('ee-local-'+id).value||e.local;
+  e.dc=document.getElementById('ee-dc-'+id).value||e.dc;
+  sv();renderEv();renderAdmEv();toast('✅ Evento atualizado!');
+}
+function delEv(id){if(!confirm('Excluir evento?'))return;D.eventos=D.eventos.filter(e=>e.id!==id);sv();renderEv();renderAdmEv();toast('🗑️ Evento excluído.');}
+
+/* config */
+function alteraSenha(){const a=document.getElementById('ns1').value,b=document.getElementById('ns2').value;if(a.length<6){alert('Mínimo 6 caracteres.');return;}if(a!==b){alert('Senhas não coincidem.');return;}D.senha=a;sv();document.getElementById('ns1').value='';document.getElementById('ns2').value='';toast('🔐 Senha alterada!');}
+function salvaConf(){const w=document.getElementById('wpp-assoc').value;if(w)D.wppAssoc=w;sv();toast('✅ Configurações salvas!');}
+function resetaDados(){if(!confirm('Resetar TUDO?'))return;D=JSON.parse(JSON.stringify(PADRAO));sv();renderProd();renderFam();renderEv();renderAdmProd();renderAdmFam();renderAdmEv();popSel();toast('🔄 Dados resetados.');}
+
+/* toast */
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
+
+/* ═══════════════ EDITOR DE LAYOUT ═══════════════ */
+
+/* Prévia de cores em tempo real */
+function pvCores(){
+  const g1=document.getElementById('lc-g1').value;
+  const g2=document.getElementById('lc-g2').value;
+  const g3=document.getElementById('lc-g3').value;
+  const g5=document.getElementById('lc-g5').value;
+  const e3=document.getElementById('lc-e3').value;
+  const e4=document.getElementById('lc-e4').value;
+  // atualiza prévia
+  const nav=document.getElementById('pv-nav');
+  if(nav) nav.style.background=`linear-gradient(135deg,${g1},${g2})`;
+  const hero=document.getElementById('pv-hero');
+  if(hero) hero.style.background=`linear-gradient(135deg,${g1},${g2})`;
+  const c1=document.getElementById('pv-c1');
+  if(c1){c1.style.background=g5;c1.style.borderLeftColor=g2;}
+  const c2=document.getElementById('pv-c2');
+  if(c2){c2.style.borderLeftColor=e3;}
+}
+
+/* Prévia de textos em tempo real */
+function pvTextos(){
+  const h1=document.getElementById('lt-h1');
+  const h1it=document.getElementById('lt-h1it');
+  const hdesc=document.getElementById('lt-desc');
+  const navnm=document.getElementById('lt-navnm');
+  const navsub=document.getElementById('lt-navsub');
+  const logoem=document.getElementById('lt-logoem');
+  if(h1&&h1it){
+    const txt=h1.value||'';
+    const it=h1it.value||'';
+    const formatted=it?txt.replace(it,`<em>${it}</em>`):txt;
+    const pvh1=document.getElementById('pv-h1');
+    if(pvh1) pvh1.innerHTML=formatted;
+  }
+  if(hdesc){
+    const pvhp=document.getElementById('pv-hp');
+    if(pvhp) pvhp.textContent=hdesc.value;
+  }
+  if(navnm){
+    const pvnm=document.getElementById('pv-nome');
+    if(pvnm) pvnm.textContent=navnm.value;
+  }
+  if(navsub){
+    const pvsub=document.getElementById('pv-sub');
+    if(pvsub) pvsub.textContent=navsub.value;
+  }
+  if(logoem){
+    const pvlogo=document.getElementById('pv-logo');
+    if(pvlogo) pvlogo.textContent=logoem.value||'🌿';
+  }
+}
+
+/* Prévia de arredondamento */
+function pvRadius(){
+  const r=document.getElementById('lr-radius').value;
+  const pv=document.getElementById('pv-hero');
+  if(pv) pv.style.borderRadius=r+'px';
+}
+
+/* Selecionar fonte */
+function selFont(el){
+  document.querySelectorAll('.font-opt-btn').forEach(b=>b.classList.remove('sel'));
+  el.classList.add('sel');
+  const pvh1=document.getElementById('pv-h1');
+  if(pvh1) pvh1.style.fontFamily=el.dataset.font;
+}
+
+/* APLICAR LAYOUT AO SITE COMPLETO */
+function aplicarLayout(){
+  const r=document.documentElement.style;
+  // Cores
+  r.setProperty('--g1',document.getElementById('lc-g1').value);
+  r.setProperty('--g2',document.getElementById('lc-g2').value);
+  r.setProperty('--g3',document.getElementById('lc-g3').value);
+  r.setProperty('--g5',document.getElementById('lc-g5').value);
+  r.setProperty('--e3',document.getElementById('lc-e3').value);
+  r.setProperty('--e4',document.getElementById('lc-e4').value);
+  r.setProperty('--n6',document.getElementById('lc-n6').value);
+  r.setProperty('--n7',document.getElementById('lc-n7').value);
+
+  // Bordas
+  const rad=document.getElementById('lr-radius').value;
+  r.setProperty('--r24',rad+'px');
+  r.setProperty('--r16',Math.round(rad*0.67)+'px');
+  r.setProperty('--r10',Math.round(rad*0.42)+'px');
+
+  // Fonte dos títulos
+  const fontSel=document.querySelector('.font-opt-btn.sel');
+  if(fontSel){
+    document.querySelectorAll('.sh,.hero h1,.nav-name strong,.hn .n,.cf-name,.cp-name,.mod-name,.ftitle,.hc-title,.tb-nome,.cev-titulo,.prev-hero-h').forEach(el=>{
+      el.style.fontFamily=fontSel.dataset.font;
+    });
+  }
+
+  // Textos — Hero
+  const h1v=document.getElementById('lt-h1').value;
+  const h1it=document.getElementById('lt-h1it').value;
+  const heroH1=document.querySelector('.hero h1');
+  if(heroH1){
+    let inner=h1v;
+    if(h1it&&h1v.includes(h1it)) inner=h1v.replace(h1it,`<span class="slash">${h1it}</span>`);
+    // preserva o .sub existente
+    const subEl=heroH1.querySelector('.sub');
+    const subHtml=subEl?subEl.outerHTML:'';
+    heroH1.innerHTML=inner+(subHtml?'<br>'+subHtml:'');
+  }
+
+  // Hero description
+  const descEl=document.querySelector('.hero-desc');
+  if(descEl){const v=document.getElementById('lt-desc').value;if(v)descEl.textContent=v;}
+
+  // Kicker
+  const kickerEl=document.querySelector('.hero-kicker');
+  if(kickerEl){const v=document.getElementById('lt-kicker').value;if(v)kickerEl.innerHTML=v;}
+
+  // Nav
+  const navStrong=document.querySelector('.nav-name strong');
+  if(navStrong){const v=document.getElementById('lt-navnm').value;if(v)navStrong.textContent=v;}
+  const navSmall=document.querySelector('.nav-name small');
+  if(navSmall){const v=document.getElementById('lt-navsub').value;if(v)navSmall.textContent=v;}
+  const navLogoEl=document.querySelector('.nav-logo');
+  if(navLogoEl){const v=document.getElementById('lt-logoem').value;if(v)navLogoEl.textContent=v;}
+  const navCta=document.querySelector('.nb-cta');
+  if(navCta){const v=document.getElementById('lt-cta').value;if(v)navCta.textContent=v;}
+
+  // Seções — títulos
+  const secs=[
+    {id:'lt-sf1',sel:'#como .sh'},
+    {id:'lt-sf2',sel:'#produtos .sh'},
+    {id:'lt-sf3',sel:'#produtores .sh'},
+    {id:'lt-sf4',sel:'#agenda .sh'},
+    {id:'lt-sf5',sel:'#sobre .sh'},
+  ];
+  secs.forEach(s=>{
+    const v=document.getElementById(s.id).value;
+    const el=document.querySelector(s.sel);
+    if(el&&v) el.innerHTML=v;
+  });
+
+  // Rodapé
+  const ftEls=document.querySelectorAll('footer p');
+  const ft1=document.getElementById('lt-ft1').value;
+  const ft2=document.getElementById('lt-ft2').value;
+  const fttese=document.getElementById('lt-fttese').value;
+  if(ftEls[0]&&ft1) ftEls[0].textContent=ft1;
+  if(ftEls[1]&&ft2) ftEls[1].textContent=ft2;
+  const ftTese=document.querySelector('.ftese');
+  if(ftTese&&fttese) ftTese.textContent=fttese;
+
+  toast('🎨 Layout aplicado ao site!');
+}
+
+/* RESETAR VISUAL */
+function resetLayout(){
+  if(!confirm('Restaurar o visual padrão do site?')) return;
+  const r=document.documentElement.style;
+  r.setProperty('--g1','#1a4a2e');
+  r.setProperty('--g2','#2d6a4f');
+  r.setProperty('--g3','#52a577');
+  r.setProperty('--g5','#d4edda');
+  r.setProperty('--e3','#d4874a');
+  r.setProperty('--e4','#f0b870');
+  r.setProperty('--n6','#f2f2ee');
+  r.setProperty('--n7','#faf9f6');
+  r.setProperty('--r24','24px');
+  r.setProperty('--r16','16px');
+  r.setProperty('--r10','10px');
+  document.getElementById('lc-g1').value='#1a4a2e';
+  document.getElementById('lc-g2').value='#2d6a4f';
+  document.getElementById('lc-g3').value='#52a577';
+  document.getElementById('lc-g5').value='#d4edda';
+  document.getElementById('lc-e3').value='#d4874a';
+  document.getElementById('lc-e4').value='#f0b870';
+  document.getElementById('lc-n6').value='#f2f2ee';
+  document.getElementById('lc-n7').value='#faf9f6';
+  document.getElementById('lr-radius').value='24';
+  document.getElementById('lrv-radius').textContent='24px';
+  pvCores();
+  toast('↩️ Visual restaurado!');
+}
+
+/* init */
+renderProd();renderFam();renderEv();
+</script>
+</body>
+</html>
